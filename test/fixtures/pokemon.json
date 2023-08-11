@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "pokemonId": "BULBASAUR",
+    "name": "Bulbasaur",
+    "form": null,
+    "type1": "grass",
+    "type2": "poison",
+    "generation": 1,
+    "atk": 118,
+    "sta": 128,
+    "def": 111,
+    "maxcp": 1260
+  },
+  {
+    "id": 2,
+    "pokemonId": "IVYSAUR",
+    "name": "Ivysaur",
+    "form": null,
+    "type1": "grass",
+    "type2": "poison",
+    "generation": 1,
+    "atk": 151,
+    "sta": 155,
+    "def": 143,
+    "maxcp": 1921
+  }
+]

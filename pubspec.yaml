@@ -41,11 +41,18 @@ dependencies:
   json_serializable: ^6.7.0
   json_annotation: ^4.8.1
 
-  # Service locator
+  # DEPENDENCY INJECTION
   get_it: ^7.2.0
 
+  # NETWORK
   chopper: ^7.0.3
+
+
   logging: ^1.2.0
+
+  # TEST DRIVEN DEVELOPMENT
+  mocktail: ^1.0.0
+  bloc_test: ^9.1.4
 
 
 dev_dependencies:

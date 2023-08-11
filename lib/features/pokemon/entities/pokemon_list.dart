@@ -12,8 +12,8 @@ class PokemonList {
     required this.items,
   });
 
-  factory PokemonList.fromJson(Map<String, dynamic> json) =>
-      _$PokemonListFromJson(json);
+  factory PokemonList.fromJson(dynamic items) =>
+      _$PokemonListFromJson({"items": items});
 
   Map<String, dynamic> toJson() => _$PokemonListToJson(this);
 }
