@@ -18,4 +18,9 @@ class Pokemon {
       _$PokemonFromJson(json);
 
   Map<String, dynamic> toJson() => _$PokemonToJson(this);
+
+  @override
+  String toString() {
+    return 'Pokemon{id: $id, pokemonId: $pokemonId, name: $name}';
+  }
 }

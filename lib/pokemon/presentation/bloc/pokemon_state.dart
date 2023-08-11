@@ -19,6 +19,10 @@ class PokemonState {
 
   factory PokemonState.initial() => PokemonState(status: Status.initial);
 
+  factory PokemonState.loading() => PokemonState(status: Status.loading);
+
+  factory PokemonState.failure() => PokemonState(status: Status.failure);
+
   factory PokemonState.success(List<Pokemon>? list) =>
       PokemonState(status: Status.success, list: list);
 
@@ -29,5 +33,10 @@ class PokemonState {
       list: list ?? this.list,
       selected: selected ?? this.selected,
     );
+  }
+
+  @override
+  String toString() {
+    return 'PokemonState{status: $status selected: $selected}';
   }
 }

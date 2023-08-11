@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/pokemon_bloc.dart';
+import '../widgets/pokemon_card.dart';
 
 class PokemonDetailScreen extends StatelessWidget {
   static const String routeName = 'pokemon_detail_screen';
@@ -11,15 +10,14 @@ class PokemonDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: BlocBuilder<PokemonBloc, PokemonState>(
-          builder: (context, state) {
-            return Text(
-              "${state.selected!.name} details",
-            );
-          },
-        )),
-        body: const Padding(
-          padding: EdgeInsets.all(16.0),
-        ));
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Pokemon detail"),
+      ),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: PokemonCard(),
+      ),
+    );
   }
 }

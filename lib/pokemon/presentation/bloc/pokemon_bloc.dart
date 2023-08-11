@@ -20,13 +20,22 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
 
   FutureOr<void> _onPokemonListLoaded(
       PokemonListLoaded event, Emitter<PokemonState> emit) async {
+    emit(PokemonState.loading());
+    try {
+      PokemonList pokemonList = await _loadPokemon();
+      emit(PokemonState.success(pokemonList.items));
+    } catch (_) {
+      emit(PokemonState.failure());
+    }
+  }
+
+  Future<PokemonList> _loadPokemon() async {
     final client = ChopperHttpClientService.create();
     final response = await client.get(endpoint: APIPath.pokemonList);
 
     final pokemonList = PokemonList.fromJson({"items": response.body})
       ..items.where((element) => element.name != null);
-
-    emit(PokemonState.success(pokemonList.items));
+    return pokemonList;
   }
 
   FutureOr<void> _onPokemonSelected(
