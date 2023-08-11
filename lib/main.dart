@@ -2,31 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 
-import 'app_router.dart';
 import 'injection_container.dart' as di;
+import 'pokemon_app.dart';
 
 void main() {
   di.init();
   _setupLogger();
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  final router = AppRouter();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      onGenerateRoute: router.generateRoute,
-    );
-  }
+  runApp(PokemonApp());
 }
 
 void _setupLogger() {

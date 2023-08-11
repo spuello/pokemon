@@ -4,8 +4,8 @@ import 'package:mocktail/mocktail.dart';
 import 'package:pokemon/features/pokemon/entities/pokemon_list.dart';
 import 'package:pokemon/features/pokemon/presentation/bloc/pokemon_bloc.dart';
 
-import '../../../fixtures/fixture_reader.dart';
-import '../../../mocks..dart';
+import '../../../../fixtures/fixture_reader.dart';
+import '../../../../mocks..dart';
 
 final jsonString = fixtureFromJson('pokemon.json');
 final tPokemonList = PokemonList.fromJson(jsonString);
