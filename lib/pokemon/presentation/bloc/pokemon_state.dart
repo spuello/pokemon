@@ -1,12 +1,33 @@
 part of 'pokemon_bloc.dart';
 
-@immutable
-abstract class PokemonState {}
+enum Status { initial, loading, success, failure }
 
-class PokemonInitial extends PokemonState {}
+class PokemonState {
+  final Status status;
+  final List<Pokemon>? list;
+  final Pokemon? selected;
 
-class PokemonSuccessListLoad extends PokemonState {
-  final List<Pokemon> list;
+  PokemonState({this.list, this.selected, required this.status});
 
-  PokemonSuccessListLoad({required this.list});
+  bool get isInitial => status == Status.initial;
+
+  bool get isSuccess => status == Status.success;
+
+  bool get isLoading => status == Status.loading;
+
+  bool get isFailure => status == Status.failure;
+
+  factory PokemonState.initial() => PokemonState(status: Status.initial);
+
+  factory PokemonState.success(List<Pokemon>? list) =>
+      PokemonState(status: Status.success, list: list);
+
+  PokemonState copyWith(
+      {Status? status, List<Pokemon>? list, Pokemon? selected}) {
+    return PokemonState(
+      status: status ?? this.status,
+      list: list ?? this.list,
+      selected: selected ?? this.selected,
+    );
+  }
 }

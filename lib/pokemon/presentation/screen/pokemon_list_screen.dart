@@ -11,26 +11,38 @@ class PokemonListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: BlocBuilder<PokemonBloc, PokemonState>(
+          builder: (context, state) {
+            return Text("${state.list!.length} Pokemons Found");
+          },
+        ),
+      ),
       body: BlocBuilder<PokemonBloc, PokemonState>(
         builder: (context, state) {
-          if (state is PokemonSuccessListLoad) {
-            return ListView.builder(
-              itemCount: state.list.length,
+          if (state.isSuccess) {
+            return ListView.separated(
+              separatorBuilder: (context, index) => Divider(),
+              itemCount: state.list!.length,
               itemBuilder: (context, index) {
-                final item = state.list[index];
+                final item = state.list![index];
                 return ListTile(
                   onTap: () {
+                    context
+                        .read<PokemonBloc>()
+                        .add(PokemonSelected(item: item));
                     Navigator.pushNamed(context, PokemonDetailScreen.routeName);
                   },
                   title: Text(
                     item.name ?? '',
                     style: const TextStyle(
-                        color: Colors.amber, fontWeight: FontWeight.w700),
+                        color: Colors.teal, fontWeight: FontWeight.w700),
                   ),
                 );
               },
             );
           }
+
           return Container(color: Colors.red);
         },
       ),

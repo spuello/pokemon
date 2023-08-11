@@ -13,8 +13,9 @@ part 'pokemon_event.dart';
 part 'pokemon_state.dart';
 
 class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
-  PokemonBloc() : super(PokemonInitial()) {
+  PokemonBloc() : super(PokemonState.initial()) {
     on<PokemonListLoaded>(_onPokemonListLoaded);
+    on<PokemonSelected>(_onPokemonSelected);
   }
 
   FutureOr<void> _onPokemonListLoaded(
@@ -25,6 +26,11 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
     final pokemonList = PokemonList.fromJson({"items": response.body})
       ..items.where((element) => element.name != null);
 
-    emit(PokemonSuccessListLoad(list: pokemonList.items));
+    emit(PokemonState.success(pokemonList.items));
+  }
+
+  FutureOr<void> _onPokemonSelected(
+      PokemonSelected event, Emitter<PokemonState> emit) {
+    emit(state.copyWith(selected: event.item));
   }
 }
