@@ -27,7 +27,7 @@ class PokemonState {
       PokemonState(status: Status.success, list: list);
 
   PokemonState copyWith(
-      {Status? status, List<Pokemon>? list, Pokemon? selected}) {
+      {Status? status, List<Pokemon>? list, Pokemon? selected,}) {
     return PokemonState(
       status: status ?? this.status,
       list: list ?? this.list,

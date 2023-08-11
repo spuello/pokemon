@@ -20,5 +20,5 @@ void init() {
   );
 
   sl.registerLazySingleton<ChopperHttpClientService>(
-      () => ChopperHttpClientService.create());
+      () => ChopperHttpClientService.create(),);
 }

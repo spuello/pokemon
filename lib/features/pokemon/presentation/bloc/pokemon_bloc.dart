@@ -32,7 +32,7 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
   }
 
   FutureOr<void> _onPokemonSelected(
-      PokemonSelected event, Emitter<PokemonState> emit) {
+      PokemonSelected event, Emitter<PokemonState> emit,) {
     emit(state.copyWith(selected: event.item));
   }
 }

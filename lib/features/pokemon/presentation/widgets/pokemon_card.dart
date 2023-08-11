@@ -24,7 +24,7 @@ class PokemonCard extends StatelessWidget {
                   .copyWith(color: Colors.teal),
             ),
           )
-        ]);
+        ],);
       },
     );
   }

@@ -13,7 +13,7 @@ abstract class ChopperHttpClientService extends ChopperService {
     final client = ChopperClient(
         converter: const JsonConverter(),
         services: [_$ChopperHttpClientService()],
-        interceptors: [HttpLoggingInterceptor()]);
+        interceptors: [HttpLoggingInterceptor()],);
 
     return _$ChopperHttpClientService(client);
   }

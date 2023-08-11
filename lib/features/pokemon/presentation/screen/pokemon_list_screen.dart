@@ -41,12 +41,12 @@ class PokemonListScreen extends StatelessWidget {
                           .read<PokemonBloc>()
                           .add(PokemonSelected(item: item));
                       Navigator.pushNamed(
-                          context, PokemonDetailScreen.routeName);
+                          context, PokemonDetailScreen.routeName,);
                     },
                     title: Text(
                       item.name ?? '',
                       style: const TextStyle(
-                          color: Colors.teal, fontWeight: FontWeight.w700),
+                          color: Colors.teal, fontWeight: FontWeight.w700,),
                     ),
                   );
                 },
@@ -66,7 +66,7 @@ class PokemonListScreen extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.only(top: 16.0),
                       child: Text("Loading...",
-                          style: Theme.of(context).textTheme.bodyLarge),
+                          style: Theme.of(context).textTheme.bodyLarge,),
                     )
                   ],
                 ),
