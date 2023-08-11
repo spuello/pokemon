@@ -6,8 +6,7 @@ abstract class PokemonState {}
 class PokemonInitial extends PokemonState {}
 
 class PokemonSuccessListLoad extends PokemonState {
-  // final List<Pokemon> list;
-  final List<String> list;
+  final List<Pokemon> list;
 
   PokemonSuccessListLoad({required this.list});
 }

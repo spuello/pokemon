@@ -130,21 +130,21 @@ packages:
     source: hosted
     version: "2.0.3"
   chopper:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: chopper
-      sha256: "23aac2db54f6a7854ed8984fba4b33222e53123c71a0ccf01d2b1087a1b5aab7"
+      sha256: "8cc23242759fb2d8a325e3e2371094f73e14fec02f01ebaba51e03db5e9eabab"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.4"
+    version: "7.0.3"
   chopper_generator:
     dependency: "direct dev"
     description:
       name: chopper_generator
-      sha256: "09d512f1acb086cf4101bef02bdb23ee7a8eb55a9935f53af866736606c57523"
+      sha256: "3e55981c7c208269263263d61d23afec9f08ddb022e728bd3ab2cb344096b1a2"
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.3"
+    version: "7.0.1"
   clock:
     dependency: transitive
     description:
@@ -356,7 +356,7 @@ packages:
     source: hosted
     version: "2.1.1"
   logging:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: logging
       sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"

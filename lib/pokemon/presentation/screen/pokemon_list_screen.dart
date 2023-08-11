@@ -23,7 +23,7 @@ class PokemonListScreen extends StatelessWidget {
                     Navigator.pushNamed(context, PokemonDetailScreen.routeName);
                   },
                   title: Text(
-                    item,
+                    item.name ?? '',
                     style: const TextStyle(
                         color: Colors.amber, fontWeight: FontWeight.w700),
                   ),
