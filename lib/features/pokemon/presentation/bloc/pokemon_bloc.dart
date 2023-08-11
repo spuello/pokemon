@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:pokemon/core/constant/api_path.dart';
-import 'package:pokemon/pokemon/entity/pokemon.dart';
-import 'package:pokemon/pokemon/entity/pokemon_list.dart';
 
-import '../../../core/services/chopper_http_client_service.dart';
+import '../../../../core/services/chopper_http_client_service.dart';
+import '../../entities/pokemon.dart';
+import '../../entities/pokemon_list.dart';
 
 part 'pokemon_event.dart';
 

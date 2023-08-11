@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pokemon/pokemon/presentation/bloc/pokemon_bloc.dart';
-import 'package:pokemon/pokemon/presentation/screen/pokemon_detail_screen.dart';
-import 'package:pokemon/pokemon/presentation/widgets/error_feedback.dart';
+import 'package:pokemon/features/pokemon/presentation/bloc/pokemon_bloc.dart';
+import 'package:pokemon/features/pokemon/presentation/screen/pokemon_detail_screen.dart';
+import 'package:pokemon/features/pokemon/presentation/widgets/error_feedback.dart';
 
 class PokemonListScreen extends StatelessWidget {
   static const String routeName = 'pokemon_list_screen';

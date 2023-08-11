@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-import 'pokemon/presentation/bloc/pokemon_bloc.dart';
+import 'features/pokemon/presentation/bloc/pokemon_bloc.dart';
 
 final sl = GetIt.instance;
 

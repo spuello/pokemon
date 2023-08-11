@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pokemon/pokemon/presentation/bloc/pokemon_bloc.dart';
-import 'package:pokemon/pokemon/presentation/screen/pokemon_detail_screen.dart';
-import 'package:pokemon/pokemon/presentation/screen/pokemon_list_screen.dart';
+import 'package:pokemon/features/pokemon/presentation/bloc/pokemon_bloc.dart';
 
+import 'features/pokemon/presentation/screen/pokemon_detail_screen.dart';
+import 'features/pokemon/presentation/screen/pokemon_list_screen.dart';
 import 'injection_container.dart';
 
 class AppRouter {
