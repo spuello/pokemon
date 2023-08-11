@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pokemon/features/pokemon/presentation/bloc/pokemon_bloc.dart';
-import 'package:pokemon/features/pokemon/presentation/screen/pokemon_detail_screen.dart';
-import 'package:pokemon/features/pokemon/presentation/widgets/error_feedback.dart';
+
+import '../bloc/pokemon_bloc.dart';
+import '../widgets/error_feedback.dart';
+import 'pokemon_detail_screen.dart';
 
 class PokemonListScreen extends StatelessWidget {
   static const String routeName = 'pokemon_list_screen';
@@ -55,10 +56,10 @@ class PokemonListScreen extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Container(
+                    const SizedBox(
                       height: 75.0,
                       width: 75.0,
-                      child: const CircularProgressIndicator(
+                      child: CircularProgressIndicator(
                         color: Colors.teal,
                       ),
                     ),

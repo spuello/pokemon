@@ -12,7 +12,7 @@ class PokemonDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Pokemon detail"),
+        title: const Text("Pokemon detail"),
       ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),

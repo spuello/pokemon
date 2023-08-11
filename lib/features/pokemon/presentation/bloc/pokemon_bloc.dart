@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:pokemon/core/constant/api_path.dart';
 
+import '../../../../core/constant/api_path.dart';
 import '../../../../core/services/chopper_http_client_service.dart';
 import '../../entities/pokemon.dart';
 import '../../entities/pokemon_list.dart';
