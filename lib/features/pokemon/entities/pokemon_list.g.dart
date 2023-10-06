@@ -7,12 +7,12 @@ part of 'pokemon_list.dart';
 // **************************************************************************
 
 PokemonList _$PokemonListFromJson(Map<String, dynamic> json) => PokemonList(
-      items: (json['items'] as List<dynamic>)
+      results: (json['results'] as List<dynamic>)
           .map((e) => Pokemon.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$PokemonListToJson(PokemonList instance) =>
     <String, dynamic>{
-      'items': instance.items,
+      'items': instance.results,
     };

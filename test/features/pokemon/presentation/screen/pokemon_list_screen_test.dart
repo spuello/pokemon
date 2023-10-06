@@ -49,7 +49,7 @@ void main() {
         'Shows a list of Pokemon cards upon successful retrieval.',
         (tester) async {
           when(() => pokemonBloc.state)
-              .thenReturn(PokemonState.success(tPokemonList.items));
+              .thenReturn(PokemonState.success(tPokemonList.results));
           await makePokemonListScreen(tester);
           expect(find.byType(ListView), findsOneWidget);
           expect(find.byType(FeedbackError), findsNothing);

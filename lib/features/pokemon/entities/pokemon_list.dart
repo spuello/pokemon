@@ -6,14 +6,14 @@ part 'pokemon_list.g.dart';
 
 @JsonSerializable()
 class PokemonList {
-  final List<Pokemon> items;
+  final List<Pokemon> results;
 
   const PokemonList({
-    required this.items,
+    required this.results,
   });
 
-  factory PokemonList.fromJson(dynamic items) =>
-      _$PokemonListFromJson({"items": items});
+  factory PokemonList.fromJson(Map<String, dynamic> json) =>
+      _$PokemonListFromJson(json);
 
   Map<String, dynamic> toJson() => _$PokemonListToJson(this);
 }

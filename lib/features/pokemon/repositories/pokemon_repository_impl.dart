@@ -16,7 +16,7 @@ class PokemonRepositoryImpl implements PokemonRepository {
     final response = await client.get(endpoint: APIPath.pokemonList);
     final result = PokemonList.fromJson(response.body);
     final items =
-        result.items.where((element) => element.name != null).toList();
+        result.results.where((element) => element.name != null).toList();
     return items;
   }
 }

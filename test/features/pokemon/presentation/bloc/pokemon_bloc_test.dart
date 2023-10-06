@@ -25,7 +25,7 @@ void main() {
       build: buildBloc,
       setUp: () {
         when(() => mockPokemonRepository.getAll())
-            .thenAnswer((_) async => tPokemonList.items);
+            .thenAnswer((_) async => tPokemonList.results);
       },
       act: (bloc) => bloc.add(PokemonListLoaded()),
       expect: () => [
@@ -60,12 +60,12 @@ void main() {
       setUp: () {
         when(() => mockPokemonRepository.getAll()).thenThrow(Exception());
       },
-      act: (bloc) => bloc.add(PokemonSelected(item: tPokemonList.items.first)),
+      act: (bloc) => bloc.add(PokemonSelected(item: tPokemonList.results.first)),
       expect: () => [
         isA<PokemonState>().having(
           (p0) => p0.selected,
           'selected',
-          equals(tPokemonList.items.first),
+          equals(tPokemonList.results.first),
         ),
       ],
     );
